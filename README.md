@@ -13,7 +13,7 @@ elm make Main.elm --output app.js
     <script src="app.js"></script>
     <script>
       var appContainer = document.getElementById('app')
-      Elm.Main.embed(appContainer)
+      Elm.Main.init({ node: appContainer });
     </script>
   </body>
 </html>
