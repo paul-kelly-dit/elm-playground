@@ -3,11 +3,27 @@ module Main exposing (..)
 import Html exposing (Html, span, text)
 import Html.Attributes exposing (class)
 
-alwaysReturn42 =
-    21 + 21
+
+
+
+type Pizza
+    = Calzone
+    | Margherita
+    | QuattroStagione
+
+
+getPizzaTupleAsString : ( Pizza, Pizza ) -> String
+getPizzaTupleAsString t =
+    let
+        ( pz1, pz2 ) =
+            t
+    in
+    ">>>> OUTPUT >>>> " ++ Debug.toString pz1 ++ "," ++ Debug.toString pz2
+
 
 main : Html a
 main =
-    let message = "" ++ String.fromInt alwaysReturn42
-    in span [ class "welcome-message" ] [ text message ]
-
+    let
+        message = getPizzaTupleAsString (Calzone, QuattroStagione)
+    in
+    span [ class "welcome-message" ] [ text message ]

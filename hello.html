@@ -4373,7 +4373,8 @@ var $elm$virtual_dom$VirtualDom$toHandlerInt = function (handler) {
 			return 3;
 	}
 };
-var $author$project$Main$alwaysReturn42 = 21 + 21;
+var $author$project$Main$Calzone = {$: 'Calzone'};
+var $author$project$Main$QuattroStagione = {$: 'QuattroStagione'};
 var $elm$json$Json$Encode$string = _Json_wrap;
 var $elm$html$Html$Attributes$stringProperty = F2(
 	function (key, string) {
@@ -4383,11 +4384,19 @@ var $elm$html$Html$Attributes$stringProperty = F2(
 			$elm$json$Json$Encode$string(string));
 	});
 var $elm$html$Html$Attributes$class = $elm$html$Html$Attributes$stringProperty('className');
+var $elm$core$Debug$toString = _Debug_toString;
+var $author$project$Main$getPizzaTupleAsString = function (t) {
+	var _v0 = t;
+	var pz1 = _v0.a;
+	var pz2 = _v0.b;
+	return '>>>> OUTPUT >>>> ' + ($elm$core$Debug$toString(pz1) + (',' + $elm$core$Debug$toString(pz2)));
+};
 var $elm$html$Html$span = _VirtualDom_node('span');
 var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
 var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
 var $author$project$Main$main = function () {
-	var message = '' + $elm$core$String$fromInt($author$project$Main$alwaysReturn42);
+	var message = $author$project$Main$getPizzaTupleAsString(
+		_Utils_Tuple2($author$project$Main$Calzone, $author$project$Main$QuattroStagione));
 	return A2(
 		$elm$html$Html$span,
 		_List_fromArray(
